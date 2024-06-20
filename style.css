@@ -1,0 +1,47 @@
+.btn.btn-secondary {
+    color: rgb(6, 112, 138);
+    /* Set text color to grey */
+    background-color: transparent;
+    /* Set background color to transparent */
+    border: none;
+    /* Remove border */
+    text-decoration: none;
+    /* Remove underline */
+
+    font-weight: bold;
+}
+
+.btn.btn-secondary:hover {
+    color: green;
+    /* Change text color on hover */
+    background-color: transparent;
+    /* Change background color on hover */
+}
+
+#search {
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+
+#searchInput {
+    width: 500px;
+    /* Set width of the input */
+    margin-left: 370px;
+    /* Center the input horizontally */
+}
+
+#parent {
+    margin-left: 120px;
+    display: grid;
+    /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns with equal width */
+    gap: 20px;
+    /* Add gap between cards */
+}
+
+.card {
+    width: 100%;
+    /* Set width of each card */
+}
