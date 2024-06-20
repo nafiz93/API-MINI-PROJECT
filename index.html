@@ -148,7 +148,35 @@
                 parent.appendChild(newDiv);
             });
         }
+        let details = (id) => {
+            fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+                .then(response => response.json())
+                .then(data => {
 
+                    let detailOfTheFood = data.meals[0];
+                    let parentone = document.querySelector('#parent1');
+                    let existingChild = document.querySelector('.child');
+
+                    if (existingChild) {// this condition means if the existingChild exist in the parent1
+                        parentone.removeChild(existingChild);
+                    }
+                    let dynamicChild = document.createElement('div');
+                    dynamicChild.setAttribute('class', 'child');
+
+                    dynamicChild.innerHTML =
+                        `
+                    <p>
+                    Category: ${detailOfTheFood.strCategory}, Trending Area: ${detailOfTheFood.strArea}
+                    </p>
+                    `;
+
+                    // Clear previous content
+
+                    // Append new content
+                    parentone.appendChild(dynamicChild);
+
+                });
+        }
 
     </script>
 </body>
