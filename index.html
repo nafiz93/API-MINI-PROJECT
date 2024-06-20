@@ -177,6 +177,36 @@
 
                 });
         }
+        let details2 = (id) => {
+            fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    let detailOfTheFood = data.meals[0];
+                    // Find the toggle text element based on the idMeal
+                    let toggleText = document.querySelector(`#toggleText_${id}`);
+                    // Check the toggle state
+                    let toggled = toggleText.getAttribute('data-toggled');
+                    // Toggle the color
+                    if (toggled === 'false') {
+                        toggleText.style.color = 'red';
+                        toggleText.setAttribute('data-toggled', 'true');
+                    } else {
+                        toggleText.style.color = 'black';
+                        toggleText.setAttribute('data-toggled', 'false');
+                    }
+                });
+        }
+
+        function toggleColor(element) {
+            let toggled = element.getAttribute('data-toggled');
+            if (toggled === 'false') {
+                element.style.color = 'red';
+                element.setAttribute('data-toggled', 'true');
+            } else {
+                element.style.color = 'black';
+                element.setAttribute('data-toggled', 'false');
+            }
+        }
 
     </script>
 </body>
