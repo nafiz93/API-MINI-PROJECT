@@ -127,6 +127,27 @@
             }
             url();
         })
+        let displayFish = (data) => {
+            let fishes = data.meals;
+            let parent = document.querySelector('#parent');
+            fishes.forEach(fish => {
+                let newDiv = document.createElement('div');
+                newDiv.setAttribute('class', 'newdiv');
+                newDiv.innerHTML = `<div class="card" style="width: 18rem;">
+
+                <img style="width: 250px; height: 250px;" class="card-img-top" src="${fish.strMealThumb}" alt="">
+                <div class="card-body">
+                  <h5 class="card-title" id="toggleText_${fish.idMeal}" data-toggled="false" onclick="toggleColor(this)">toggle</h5>
+                  <p class='peragraph'>${fish.strInstructions.slice(0, 150)}</p>
+                  <a href="${fish.strYoutube}"  class="btn btn-secondary">Food Video</a>
+                  <button onclick="details('${fish.idMeal}')"  class="btn btn-secondary">Details</button>
+                  <button onclick="details2('${fish.idMeal}')" class="btn btn-secondary">Details2</button>
+
+                </div>
+              </div>`;
+                parent.appendChild(newDiv);
+            });
+        }
 
 
     </script>
