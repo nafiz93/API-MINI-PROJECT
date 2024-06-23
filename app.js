@@ -26,7 +26,7 @@ let displayFish = (data) => {
 
         <img style="width: 250px; height: 250px;" class="card-img-top" src="${fish.strMealThumb}" alt="">
         <div class="card-body">
-          <h5 class="card-title">toggle</h5>
+          
           <p class='peragraph'>${fish.strInstructions.slice(0, 150)}</p>
           <a href="${fish.strYoutube}"  class="btn btn-secondary">Food Video</a>
           <button onclick="details('${fish.idMeal}')"  class="btn btn-secondary">Details</button>

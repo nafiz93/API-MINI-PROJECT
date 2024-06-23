@@ -107,11 +107,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal Search</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <input type="text" id="searchInput" placeholder="Search for a meal">
-    <button id="SearchButton">Search</button>
+
+    <h1 id="headtag">Welcome To Our Cooking Blog </h1>
+
+    <div id="srcbox">
+        <input type="text" id="searchInput" placeholder="Search for a meal">
+        <button id="SearchButton">Search</button>
+    </div>
     <div id="parent"></div>
     <div id="parent1"></div>
 
@@ -137,11 +143,11 @@
 
                 <img style="width: 250px; height: 250px;" class="card-img-top" src="${fish.strMealThumb}" alt="">
                 <div class="card-body">
-                  <h5 class="card-title" id="toggleText_${fish.idMeal}" data-toggled="false" onclick="toggleColor(this)">toggle</h5>
+                  <h5 class="card-title" id="toggleText_${fish.idMeal}" data-toggled="false" onclick="toggleColor(this)"></h5>
                   <p class='peragraph'>${fish.strInstructions.slice(0, 150)}</p>
                   <a href="${fish.strYoutube}"  class="btn btn-secondary">Food Video</a>
-                  <button onclick="details('${fish.idMeal}')"  class="btn btn-secondary">Details</button>
-                  <button onclick="details2('${fish.idMeal}')" class="btn btn-secondary">Details2</button>
+                  <button onclick="details('${fish.idMeal}')"  class="btn btn-secondary"></button>
+                  <button onclick="details2('${fish.idMeal}')" class="btn btn-secondary"></button>
 
                 </div>
               </div>`;

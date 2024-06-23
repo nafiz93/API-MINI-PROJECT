@@ -45,3 +45,42 @@
     width: 100%;
     /* Set width of each card */
 }
+
+#srcbox {
+    max-width: 80rem;
+    /* 80rem is roughly equivalent to max-w-7xl in Tailwind CSS */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40pxpx;
+    margin-bottom: 30px;
+}
+
+#headtag {
+    margin-left: 450px;
+    margin-top: 50px;
+    color: rgb(6, 112, 138);
+}
+
+
+/* styles.css */
+
+#SearchButton {
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    color: rgb(6, 112, 138);
+    /* Set text color */
+    background-color: transparent;
+    /* Set background color to transparent */
+    border: none;
+    /* Remove border */
+    text-decoration: none;
+    /* Remove underline */
+    font-weight: bold;
+}
+
+#SearchButton:hover {
+    background-color: green;
+    /* Change background color on hover */
+    color: white;
+    /* Change text color on hover */
+}
